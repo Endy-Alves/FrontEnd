@@ -1,4 +1,9 @@
-
+firebase.auth().onAuthStateChanged(function(user) {
+    if (user) {
+      window.location.href = "../../pages/home/home.html";
+    }
+  })
+  
 function register() {
     showLoading();
     const email = document.getElementById('email').value;
