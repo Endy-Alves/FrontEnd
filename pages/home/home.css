@@ -17,3 +17,41 @@
     align-items: center;
     font-size: 24px;
 }
+
+ol {
+    list-style-type: none;
+    padding: 0;
+}
+ol li{
+    cursor: pointer;
+    background-color: rgb(230, 230, 230);
+    border: 1px solid orangered;
+    padding: 8px 16px;
+}
+ol li:hover {
+    background-color: rgb(189, 189, 189);
+    border: 3px solid rgb(255, 81, 17);
+    font-size: 15px;
+}
+ol  li.expense{
+    border-left: 10px solid red;
+}
+ol li.income{
+    border-left: 10px solid green;
+}
+p {
+    margin: 4px 0;
+}
+.fab{
+    width: 54px;
+    height: 54px;
+    border-radius: 100%;
+    font-size: 40px;
+    background-color: orangered;
+    bottom: 32px;
+    position: fixed;
+    right: 32px;
+}
+.fab:hover{
+    background-color: rgb(218, 58, 0);
+}
