@@ -25,10 +25,25 @@ function register(){
    window.location.href = "./pages/register/register.html"
 }
 
+function recoverPassword(){
+  showLoading()
+  const username = document.getElementById('username').value;
+
+  firebase.auth().sendPasswordResetEmail(username).then(() => {
+    hideLoading()
+    alert('Email enviado com sucesso')
+  }).catch(error => {
+    hideLoading()
+    alert(getErrorMessage(error))
+  })
+}
+
 // função de mudança de mensagem de erro, pega o erro e transforma a mensagem de erro padrão do alert em uma mensagem que eu criei
 function getErrorMessage(error){
   if (error.code == "auth/invalid-email") {
-    return "Usuario nao encontrado";
+    return "Usuario não encontrado";
+  }if(error.code == "auth/invalid-credential") {
+    return "Usuario ou senha invalidos"
   }
   return error.message;
 }
