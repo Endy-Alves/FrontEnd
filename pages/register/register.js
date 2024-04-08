@@ -3,7 +3,7 @@ firebase.auth().onAuthStateChanged(function(user) {
       window.location.href = "../../pages/home/home.html";
     }
   })
-  
+  // Botão de registro, usado com a mesma ideia do botão de login no arquivo "index.js"
 function register() {
     showLoading();
     const email = document.getElementById('email').value;
@@ -21,6 +21,7 @@ function register() {
         })
 }
 
+// Função que altera a mensagem de erro padrão para uma que eu criei
 function getErrorMessage(error) {
     if (error.code == "auth/email-already-in-use") {
         return "Email ja esta em uso";
@@ -31,4 +32,5 @@ function getErrorMessage(error) {
     }
     return error.message;
 }
+//ignore
 console.log(getErrorMessage())

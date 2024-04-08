@@ -1,3 +1,4 @@
+// função de logout, sair com o usuario, para que possa retornar a pagina de login e registro
 function logout() {
     showLoading()
     firebase.auth().signOut().then(() => {

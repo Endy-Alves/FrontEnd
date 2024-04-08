@@ -1,4 +1,4 @@
-// Your web app's Firebase configuration
+// Minha aplicação do firebase. Tenho que conectar todo arquivo a este para que os recursos do firebase funcionem
 const firebaseConfig = {
     apiKey: "AIzaSyC9ZIP5UmN53lVysddRhn22rYAC5Z3vDlM",
     authDomain: "controle-de-gastos-10fbb.firebaseapp.com",
